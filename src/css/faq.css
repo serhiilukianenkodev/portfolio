@@ -1,9 +1,17 @@
 .faq {
-  padding: 96px 0;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .faq-list {
-  margin-top: 20px;
+  margin-top: 32px;
+
+  @media only screen and (min-width: 1440px) {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: column;
+  }
 }
 
 .faq-item {
@@ -12,6 +20,24 @@
 
   &:last-child {
     border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  }
+
+  @media only screen and (min-width: 768px) {
+    padding: 32px 0;
+  }
+
+  @media only screen and (min-width: 1440px) {
+    padding: 32px 32px 32px 0;
+    width: 688px;
+
+    &:nth-child(3) {
+      border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+    }
+
+    &:nth-last-child(-n + 3) {
+      padding-left: 32px;
+      border-left: 1px solid rgba(250, 250, 250, 0.2);
+    }
   }
 }
 
@@ -33,9 +59,8 @@
   padding: 7px;
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 50%;
-
-  transition: transform 0.5s ease-in-out;
   transform: rotateX(0);
+  transition: transform 0.5s ease-in-out;
 
   .faq-item.is-active & {
     transform: rotateX(180deg);
@@ -48,8 +73,4 @@
   .faq-item.is-active & {
     margin-top: 16px;
   }
-}
-
-.ac-panel {
-  background-color: var(--bg-color-main);
 }

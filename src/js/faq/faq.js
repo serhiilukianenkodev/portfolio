@@ -1,7 +1,7 @@
 import Accordion from 'accordion-js';
 
-const accordeon = new Accordion('.accordion-container', {
-  //   duration: 500,
+new Accordion('.faq-list', {
+  duration: 500,
   showMultiple: true,
   elementClass: 'faq-item',
   triggerClass: 'faq-question',
