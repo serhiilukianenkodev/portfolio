@@ -1,1 +1,57 @@
-<section class="projects" id="projects"></section>
+<section class="projects container" id="projects">
+  <h2 class="title-project">Projects</h2>
+  <div class="container-project">
+    <div class="first-part-project">
+      <ul class="list-project">
+        <li class="item-list-project">#react</li>
+        <li class="item-list-project">#js</li>
+        <li class="item-list-project">#node js</li>
+        <li class="item-list-project">#git</li>
+      </ul>
+      <p class="text-project">
+        Programming Across Borders: Ideas, Technologies, Innovations
+      </p>
+      <button type="button" class="btn-project button">See project</button>
+    </div>
+    <picture class="container-img-project">
+      <source
+        srcset="
+          /img/projects/mob_first_page_1x.webp 1x,
+          /img/projects/mob_first_page_2x.webp 2x
+        "
+        media="(man-width: 375px)"
+      />
+      <source
+        srcset="
+          /img/projects/tab_first_page_1x.webp 1x,
+          /img/projects/tab_first_page_2x.webp 2x
+        "
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="
+          /img/projects/web_first_page_1x.webp 1x,
+          /img/projects/web_first_page_2x.webp 2x
+        "
+        media="(mix-width: 1440px)"
+      />
+      <img
+        src="/img/projects/mob_first_page_1x.webp"
+        alt="Maket project"
+        class="image-project"
+      />
+    </picture>
+  </div>
+  <div class="btn-arrow-project">
+    <button type="button" class="left-arrow">
+      <svg class="icons-arrow-left" width="25" height="24">
+        <use href="/img/sprite.svg#icon-arrow-narrow-left"></use>
+      </svg>
+    </button>
+    <button type="button" class="right-arrow">
+      <svg class="icons-arrow-right" width="25" height="24">
+        <use href="/img/sprite.svg#icon-arrow-narrow-right"></use>
+      </svg>
+    </button>
+  </div>
+</section>
