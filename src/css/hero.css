@@ -1,13 +1,14 @@
 .hero {
-  background-image: url(../img/hero/hero-mob-min.webp);
-  max-width: 375px;
+  background-image: url(../img/hero/hero-desc-min.webp);
+  background-position: -240px 0;
+  background-size: cover;
   height: 812px;
   margin: 0 auto;
 }
 
 @media screen and (min-resolution: 192dpi) {
   .hero {
-    background-image: url(../img/hero/hero-mob-x2-min.webp);
+    background-image: url(../img/hero/hero-desc-x2-min.webp);
   }
 }
 
@@ -32,12 +33,9 @@ span {
   display: block;
 }
 
-
 .hero-socials {
   display: flex;
   gap: 4px;
-  width: 342px;
-  height: 37px;
   margin-bottom: 32px;
 }
 
@@ -54,7 +52,7 @@ span {
   font-weight: 500;
   font-size: 14px;
   letter-spacing: -0.02em;
-  color: var(--text-color-white); 
+  color: var(--text-color-white);
 }
 
 .link {
@@ -67,11 +65,20 @@ span {
   min-width: 178px;
 }
 
+@media only screen and (max-width: 374px) {
+  .hero-social-item {
+    width: 30px;
+    height: 30px;
+    font-size: 10px;
+  }
+
+  .hero-contacts {
+    min-width: 140px;
+  }
+}
 
 @media only screen and (min-width: 768px) {
   .hero {
-    background-image: url(../img/hero/hero-tab-min.webp);
-    max-width: 768px;
     height: 1024px;
   }
 
@@ -87,7 +94,6 @@ span {
   }
 
   .hero-socials {
-
     margin-left: auto;
     gap: 8px;
     width: 473px;
@@ -106,28 +112,20 @@ span {
     height: 55px;
     font-size: 16px;
   }
-      
-  .hero-social-item:hover, .hero-social-item:focus {
+
+  .hero-social-item:hover,
+  .hero-social-item:focus {
     border: 1px solid var(--text-color-white);
   }
-  
+
   .hero-contacts {
     min-width: 223px;
   }
-
-  @media screen and (min-resolution: 192dpi) {
-    .hero {
-      background-image: url(../img/hero/hero-tab-x2-min.webp);
-    }
-  }
 }
-
-
 
 @media only screen and (min-width: 1440px) {
   .hero {
-    background-image: url(../img/hero/hero-desc-min.webp);
-    max-width: 1440px;
+    background-position: center;
     height: 900px;
   }
 
@@ -142,11 +140,4 @@ span {
     width: 1084px;
     font-size: 90px;
   }
-
-  @media screen and (min-resolution: 192dpi) {
-    .hero {
-      background-image: url(../img/hero/hero-desc-x2-min.webp);
-    }
-  }
 }
-  

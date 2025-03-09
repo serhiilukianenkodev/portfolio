@@ -15,16 +15,46 @@
   --text-color-accent: #ed3b44;
   --bg-color-accent: #ed3b44;
   --bg-color-accent-hover: #e0373f;
+
+  .hero {
+    background-image: url(../img/hero/hero-desc-min.webp);
+  }
+
+  @media screen and (min-resolution: 192dpi) {
+    .hero {
+      background-image: url(../img/hero/hero-desc-x2-min.webp);
+    }
+  }
 }
 
 [data-theme='#ff7f08'] {
   --text-color-accent: #ff7f08;
   --bg-color-accent: #ff7f08;
   --bg-color-accent-hover: #f27b03;
+
+  .hero {
+    background-image: url(../img/hero/hero-desc-min-orange.webp);
+  }
+
+  @media screen and (min-resolution: 192dpi) {
+    .hero {
+      background-image: url(../img/hero/hero-desc-x2-min-orange.webp);
+    }
+  }
 }
 
 [data-theme='#0041e8'] {
   --text-color-accent: #0041e8;
   --bg-color-accent: #0041e8;
   --bg-color-accent-hover: #0d45ed;
+
+  .hero {
+    background-image: url(../img/hero/hero-desc-min-blue.webp);
+  }
+
+  @media screen and (min-resolution: 192dpi) {
+    .hero {
+      background-image: url(../img/hero/hero-desc-x2-min-blue.webp);
+    }
+  }
 }
