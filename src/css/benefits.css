@@ -1,2 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600&display=swap');
+
 .benefits {
+    background-color: #1c1d20;
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    max-width: 1376px;
+    margin: 0 auto;
+}
+
+.left {
+    display: flex;
+    align-items: flex-start;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.benefits-title {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: rgba(250, 250, 250, 0.4);
+    margin: 0;
+}
+
+.benefits-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 16px;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+.benefit-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    background: #242527;
+    border-radius: 20px;
+    padding: 24px;
+    width: 332px;
+    height: 270px;
+    text-align: left;
+}
+
+.benefit-icon-container {
+    width: 48px;
+    height: 48px;
+    background-color: #ed3b44;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.benefit-item img {
+    width: 24px;
+    height: 24px;
+    fill: #FAFAFA;
+}
+
+.benefit-item h3 {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: #fafafa;
+    margin: 0;
+}
+
+.benefit-item p {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: rgba(250, 250, 250, 0.6);
+    margin: 0;
+}
+
+.benefits-link {
+    display: inline-block;
+    margin-top: 64px;
+    margin-left: auto;
+    padding: 18px 36px;
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    border-radius: 60px;
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: #fafafa;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.benefits-link:hover {
+    background: #ed3b44;
+    transform: scale(1.05);
+}
+
+@media (max-width: 374px) {
+    .benefits {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+
+    .layout {
+        grid-template-columns: 1fr;
+        max-width: 344px;
+    }
+
+    .benefits-title {
+        margin-left: 0;
+    }
+
+    .benefits-list {
+        justify-content: center;
+    }
+
+    .benefit-item {
+        width: 100%;
+        height: auto;
+        min-height: 200px;
+    }
+
+    .benefit-icon-container {
+        width: 36px;
+        height: 36px;
+    }
+
+    .benefit-item img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .benefits-link {
+        margin: 48px auto 0;
+        width: 150px;
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+    .benefits {
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+
+    .layout {
+        grid-template-columns: 1fr;
+        max-width: 704px;
+    }
+
+    .benefits-title {
+        margin-left: 0;
+    }
+
+    .benefits-list {
+        justify-content: center;
+    }
+
+    .benefit-item {
+        width: 100%;
+        height: auto;
+        min-height: 220px;
+    }
+
+    .benefits-link {
+        margin: 48px auto 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+    .layout {
+        grid-template-columns: 1fr 1fr;
+        max-width: 1200px;
+    }
+
+    .benefit-item {
+        width: 100%;
+        max-width: 400px;
+        height: 270px;
+    }
+
+    .benefits-link {
+        margin-left: auto;
+    }
+}
+@media (min-width: 1440px) {
+    .layout {
+        grid-template-columns: 1fr 1fr;
+        max-width: 1376px;
+    }
+
+    .benefit-item {
+        width: 332px;
+        height: 270px;
+    }
+
+    .benefits-link {
+        margin-left: auto;
+    }
 }
