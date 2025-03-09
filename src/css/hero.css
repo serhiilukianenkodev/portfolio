@@ -25,7 +25,7 @@
   line-height: 1;
   letter-spacing: -0.03em;
   text-transform: uppercase;
-  color: #FAFAFA;
+  color: var(--text-color-white);
 }
 
 span {
@@ -54,7 +54,7 @@ span {
   font-weight: 500;
   font-size: 14px;
   letter-spacing: -0.02em;
-  color: #FAFAFA; 
+  color: var(--text-color-white); 
 }
 
 .link {
@@ -107,8 +107,8 @@ span {
     font-size: 16px;
   }
       
-  .hero-social-item:hover {
-    border: 1px solid #FAFAFA;
+  .hero-social-item:hover, .hero-social-item:focus {
+    border: 1px solid var(--text-color-white);
   }
   
   .hero-contacts {
