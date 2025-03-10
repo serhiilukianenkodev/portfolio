@@ -38,18 +38,16 @@
 }
 
 .modal-title {
-  font-family: var(--font-family);
   font-weight: 600;
   font-size: 20px;
   line-height: 150%;
   letter-spacing: -0.02em;
-  color: #fafafa;
+  color: var(--text-color-white);
   margin-bottom: 16px;
   text-align: center;
 }
 
 .modal-text {
-  font-family: var(--font-family);
   font-weight: 500;
   font-size: 16px;
   line-height: 150%;
