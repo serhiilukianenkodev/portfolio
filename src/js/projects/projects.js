@@ -1,5 +1,6 @@
 // import Swiper JS
 import Swiper from 'swiper';
+import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 import 'swiper/css';
 
 // ==============================================================
@@ -15,6 +16,8 @@ refs.btnSeeProject.addEventListener('click', () => {
 // ==============================================================
 
 const swiper = new Swiper('.swiper', {
+  modules: [Navigation, Keyboard, Mousewheel],
+
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',

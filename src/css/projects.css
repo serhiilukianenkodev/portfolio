@@ -4,25 +4,21 @@
 @import url('./base.css');
 
 /* Mobile */
-
 .projects {
-  background: #1c1d20;
-  margin-top: 32px;
-  margin-bottom: 32px;
-}
-
-.container-project {
 }
 
 .title-project {
-  font-family: 'Inter Tight', sans-serif;
+  /* font-family: 'Inter Tight', sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: -0.02em;
   text-transform: uppercase;
-  color: rgba(250, 250, 250, 0.4);
+  color: rgba(250, 250, 250, 0.4); */
   margin-bottom: 32px;
+}
+
+.container-project {
 }
 
 .first-part-project {
@@ -124,16 +120,9 @@
   width: 52px;
   height: 100%;
   background: #1c1d20;
-}
-
-.right-arrow {
   border: 1px solid rgba(250, 250, 250, 0.5);
-  color: #FFFFFF;
+  color: #ffffff;
 }
-
-/* .left-arrow {
-  border: 1px solid rgba(250, 250, 250, 0.2);
-} */
 
 .icons-arrow-left {
 }
@@ -141,14 +130,14 @@
 .icons-arrow-right {
 }
 
-.left-arrow:disabled {
+.swiper-button-disabled {
   background: #1c1d20;
   border: 1px solid rgba(250, 250, 250, 0.2);
   cursor: not-allowed;
   opacity: 0.5;
 }
 
-.left-arrow:disabled svg {
+.swiper-button-disabled svg {
   color: #3b3b3b;
   fill: none;
 }
@@ -156,11 +145,6 @@
 /* Tablet */
 
 @media screen and (min-width: 768px) {
-  .projects {
-    margin-top: 48px;
-    margin-bottom: 48px;
-  }
-
   .first-part-project {
     min-width: 704px;
     height: 566px;
@@ -215,11 +199,6 @@
 }
 
 @media screen and (min-width: 1440px) {
-  .projects {
-    margin-top: 82px;
-    margin-bottom: 82px;
-  }
-
   .container-project {
     min-width: 1376px;
     height: 625px;
