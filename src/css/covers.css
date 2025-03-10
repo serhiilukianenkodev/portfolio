@@ -1,2 +1,143 @@
 .covers {
+  max-width: 375px;
+  height: 508px;
+  margin: 0 auto;
 }
+
+.covers-content {
+  background-color: var(--bg-color-gray);
+  background-image: url(../img/covers/background-mob-min.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  height: 508px;
+  margin: 0 auto;
+}
+
+@media screen and (min-resolution: 192dpi) {
+  .covers-content {
+    background-image: url(../img/covers/background-mob-x2-min.png);
+  }
+}
+
+
+.covers-animatior {
+  position: absolute;
+  left: 0;
+  top: 20%;
+
+  display: flex;
+
+  animation-name: coversAnimator;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  animation-play-state: paused;
+}
+
+.covers-animatior.animate {
+  animation-play-state: running;
+}
+
+@keyframes coversAnimator {
+  0% {
+    transform: rotate(16deg) translateX(0%);
+  }
+  100% {
+    transform: rotate(16deg) translateX(-50%);
+  }
+}
+
+.covers-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  flex-shrink: 0;
+
+  width: calc(282px * 3 + 30px * 2 + 30px);
+  height: 100%;
+  padding-left: 30px;
+}
+
+.covers-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 282px;
+  height: 162px;
+}
+
+.covers-item:is(:nth-child(4), :nth-child(5), :nth-child(6), :nth-child(10)) {
+  transform: translateX(-40%);
+}
+
+.cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+  .covers {
+    max-width: 768px;
+    height: 960px;
+  }
+
+  .covers-content {
+    height: 960px;
+    background-image: url(../img/covers/background-tab-min.png);
+  }
+
+  @media screen and (min-resolution: 192dpi) {
+    .covers-content {
+      background-image: url(../img/covers/background-tab-x2-min.png);
+    }
+  }
+
+  .covers-list {
+    width: calc(544px * 3 + 30px * 2 + 30px);
+  }
+
+  .covers-item {
+    width: 544px;
+    height: 314px;
+  }
+
+}
+
+
+
+@media only screen and (min-width: 1440px) {
+  .covers {
+    max-width: 1440px;
+    height: 960px;
+  }
+
+  .covers-content {
+    background-image: url(../img/covers/background-desk-min.png);
+  }
+
+  @media screen and (min-resolution: 192dpi) {
+    .covers-content {
+      background-image: url(../img/covers/background-desk-x2-min.png);
+    }
+  }
+
+  .covers-list {
+    gap: 50px;
+    width: calc(544px * 3 + 50px * 2 + 50px);
+    padding-left: 50px;
+  }
+}
+
