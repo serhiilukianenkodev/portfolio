@@ -1,7 +1,7 @@
 /* Common styles */
 @import url('./reset.css');
-@import url('./base.css');
 @import url('./container.css');
+@import url('./base.css');
 
 /* Mobile */
 
@@ -153,6 +153,7 @@
 /* Tablet */
 
 @media screen and (min-width: 768px) {
+
   .first-part-project {
     min-width: 704px;
     height: 566px;
@@ -207,10 +208,6 @@
 }
 
 @media screen and (min-width: 1440px) {
-  .projects {
-    padding-top: 82px;
-    padding-bottom: 82px;
-  }
 
   .container-project {
     min-width: 1376px;
