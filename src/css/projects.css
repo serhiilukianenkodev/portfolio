@@ -32,8 +32,6 @@
 }
 
 .item-list-project {
-  /* font-family: 'Inter Tight', sans-serif;
-  font-weight: 500; */
   font-size: 15px;
   letter-spacing: -0.02em;
   color: var(--bg-color-main);
