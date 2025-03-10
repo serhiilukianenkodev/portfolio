@@ -24,17 +24,17 @@
 }
 
 .section {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  margin-top: 32px;
+  margin-bottom: 32px;
 
   @media only screen and (min-width: 768px) {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    margin-top: 48px;
+    margin-bottom: 48px;
   }
 
   @media only screen and (min-width: 1440px) {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    margin-top: 82px;
+    margin-bottom: 82px;
   }
 }
 
@@ -42,5 +42,5 @@
   text-transform: uppercase;
   color: var(--text-color-title);
   font-size: inherit;
-  font-weight: 700;
+  font-weight: 600;
 }
