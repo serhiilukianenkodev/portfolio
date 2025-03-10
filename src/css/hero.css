@@ -2,6 +2,7 @@
   background-image: url(../img/hero/hero-desc-min.webp);
   background-position: -240px 0;
   background-size: cover;
+  background-repeat: no-repeat;
   height: 812px;
   margin: 0 auto;
 }
