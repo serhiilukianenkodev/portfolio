@@ -6,11 +6,10 @@ import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 // import Swiper styles
 import 'swiper/css';
-// import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
-const gallery = document.querySelector('.reviews-gallery');
-const swiperCards = document.querySelector('.swiper');
+getAllFoto();
 
 async function getAllFoto() {
   try {
@@ -19,31 +18,34 @@ async function getAllFoto() {
     );
     makeGallery(result.data);
 
-    const targetLast = document.querySelector('.reviews-item:last-child');
-    const targetFirst = document.querySelector('.reviews-item:first-child');
+    const targetLast = document.querySelector('.swiper-slide:last-child');
+    const targetFirst = document.querySelector('.swiper-slide:first-child');
 
     const options = {
       rootMargin: '0px',
       threshold: 1.0,
     };
+
     const observerLast = new IntersectionObserver(arr => {
       if (arr[0].isIntersecting) console.log('LAST', arr[0]);
     }, options);
+
     const observerFirst = new IntersectionObserver(arr => {
       if (arr[0].isIntersecting) console.log('FIRST', arr[0]);
     }, options);
+
     observerFirst.observe(targetFirst);
     observerLast.observe(targetLast);
   } catch (error) {
-    const result = `<li class="reviews-item">
+    const messageErr = `<li class="reviews-item">
         <div class="reviews-content">
           <p class="reviews-error">Not found</p>
         </div>
       </li>
     `;
-    console.log(result);
+    console.log(messageErr);
 
-    gallery.insertAdjacentHTML('beforeend', result);
+    gallery.insertAdjacentHTML('beforeend', messageErr);
 
     const target = document.querySelector('.reviews-error');
     const options = {
@@ -75,48 +77,55 @@ function messageAllert(message, text, backColor) {
 }
 
 function makeGallery(array) {
+  // =========================================== gallery
+  const gallery = document.querySelector('.reviews-gallery');
   const listImages = array
     .map(
       element =>
-        `<li class="reviews-item">
-        <div class="reviews-thumb">
-          <img
-            src="${element.avatar_url}"
-            alt="foto"
-            width="48"
-            class="reviews-image"
-          />
-        </div>
-        <div class="reviews-content">
-          <h3 class="reviews-member">${element.author}</h3>
-          <p class="reviews-text">${element.review}
-          </p>
-        </div>
-      </li>
+        `<li class="swiper-slide">
+          <div class="reviews-thumb">
+            <img
+              src="${element.avatar_url}"
+              alt="foto"
+              width="48"
+              class="reviews-image"
+            />
+          </div>
+          <div class="reviews-content">
+            <h3 class="reviews-member">${element.author}</h3>
+            <p class="reviews-text">${element.review}
+            </p>
+          </div>
+        </li>
     `
     )
     .join(' ');
+  gallery.insertAdjacentHTML('beforeend', listImages);
+
+  // =========================================== buttons
+  const reviewsCards = document.querySelector('.swiper');
   const listBtn = `<div class="swiper-buttons">
-      <div class="swiper-btn  btn-left swiper-left">
+      <div class="swiper-btn btn-left">
         <svg class="arrow">
           <use href="./img/sprite.svg#icon-arrow-narrow-right"></use>
         </svg>
       </div>
-      <div class="swiper-btn swiper-right">
+      <div class="swiper-btn btn-right">
         <svg class="arrow">
           <use href="./img/sprite.svg#icon-arrow-narrow-right"></use>
         </svg>
       </div>
     </div>`;
+  reviewsCards.insertAdjacentHTML('beforeend', listBtn);
 
-  gallery.insertAdjacentHTML('beforeend', listImages);
-  swiperCards.insertAdjacentHTML('beforeend', listBtn);
+  const swiper = new Swiper('.swiper', {
+    modules: [Navigation, Pagination],
 
-  new Swiper('.swiper', {
     cssMode: true,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.btn-right',
+      prevEl: '.btn-left',
+      keyboard: true,
     },
     // pagination: {
     //   el: '.swiper-pagination',
@@ -128,9 +137,6 @@ function makeGallery(array) {
     // mousewheel: {
     //   invert: true,
     // },
-
     // keyboard: true,
   });
 }
-
-getAllFoto();
