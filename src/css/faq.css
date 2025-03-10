@@ -100,7 +100,8 @@
   }
 }
 
-.swiper-skills.swiper {
+.skils .swiper-skills {
+  overflow: hidden;
   width: 100%;
 }
 
