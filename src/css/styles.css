@@ -7,6 +7,7 @@
 /* Common styles */
 @import 'modern-normalize/modern-normalize.css';
 @import url('./reset.css');
+@import url('./theme.css');
 @import url('./base.css');
 @import url('./container.css');
 
@@ -21,3 +22,4 @@
 @import url('./reviews.css');
 @import url('./footer.css');
 @import url('./modal.css');
+@import url('./themeSwitch.css');
