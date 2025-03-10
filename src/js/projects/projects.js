@@ -15,13 +15,16 @@ refs.btnSeeProject.addEventListener('click', () => {
 
 // ==============================================================
 
-const swiper = new Swiper('.swiper', {
+const swiperProjects = new Swiper('.swiper-projects', {
   modules: [Navigation, Keyboard, Mousewheel],
 
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+
+  direction: 'horizontal',
+  slidesPerView: 1,
 
   simulateTouch: true,
 
