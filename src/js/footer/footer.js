@@ -63,6 +63,17 @@ refs.modal.addEventListener('click', (event) => {
     }
 });
 
+refs.formEmail.addEventListener('mouseover', function() {
+    refs.formEmail.style.borderBottom ='1px solid rgba(250, 250, 250, 0.5)';
+});
+
+refs.formEmail.addEventListener('mouseout', function() {
+    if (refs.formEmail.value.trim() === '') {
+        refs.formEmail.style.borderBottom = '1px solid rgba(250, 250, 250, 0.2)';
+    }
+});
+
+
 function onEscPress(event) {
     if (event.key === 'Escape') {
         closeModal();
