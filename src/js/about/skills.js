@@ -28,4 +28,10 @@ const swiper = new Swiper('.swiper-skills', {
   navigation: {
     nextEl: '.swiper-button-next',
   },
+  on: {
+    click: ({ activeIndex, clickedIndex }) => {
+      if (activeIndex === clickedIndex) return;
+      swiper.slideNext();
+    },
+  },
 });
