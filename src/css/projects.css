@@ -90,9 +90,9 @@
 
 .btn-arrow-project {
   margin: 32px auto 0 auto;
-  width: 118px;
+  width: 116px;
   height: 52px;
-  display: block;
+  display: flex;
   justify-content: space-between;
   align-items: center;
 }
