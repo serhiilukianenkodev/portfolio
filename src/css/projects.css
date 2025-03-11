@@ -3,7 +3,7 @@
 @import url('./container.css');
 @import url('./base.css');
 
-/* Mobile */
+/* Mobile 320 */
 .projects {
 }
 
@@ -16,7 +16,7 @@
 
 .first-part-project {
   border-radius: 24px;
-  max-width: 375px;
+  min-width: 320px;
   height: 417px;
   background: #fafafa;
   padding: 32px;
@@ -27,7 +27,7 @@
   height: 96px;
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 4px;
   margin-bottom: 96px;
 }
 
@@ -38,7 +38,7 @@
   text-align: center;
   border: 1px solid rgba(28, 29, 32, 0.2);
   border-radius: 60px;
-  padding: 13px 18px;
+  padding: 11px 16px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -49,25 +49,25 @@
 }
 
 .text-project {
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.17;
   letter-spacing: -0.03em;
   color: var(--bg-color-main);
-  width: 273px;
+  width: 240px;
   height: 84px;
   margin-bottom: 32px;
 }
 
 .btn-project {
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: -0.02em;
   text-align: center;
   color: var(--text-color-white);
   border-radius: 60px;
   border-color: inherit;
   border: none;
-  padding: 13px 32px;
-  width: 141px;
+  padding: 10px 28px;
+  width: 130px;
   height: 45px;
   background: var(--text-color-accent);
 }
@@ -79,20 +79,17 @@
 
 .container-img-project {
   border-radius: 0 0 24px 24px;
-  width: 343px;
+  width: 320px;
   height: 395px;
   background: var(--bg-color-black);
 }
 
 .image-project {
-  display: block;
-  padding: 100px 16px;
-  width: 100%;
-  height: auto;
+  padding: 88px 16px;
 }
 
 .btn-arrow-project {
-  margin: 32px 113.5px 0 113.5px;
+  margin: 32px auto 0 auto;
   width: 118px;
   height: 52px;
   display: block;
@@ -129,16 +126,47 @@
   fill: none;
 }
 
-/*  */
-
+/* Mobile 375 */
 @media screen and (min-width: 375px) {
+  .first-part-project {
+    max-width: 375px;
+  }
+
+  .list-project {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .item-list-project {
+    padding: 13px 18px;
+  }
+
   .text-project {
     font-size: 24px;
+    width: 273px;
+  }
+
+  .btn-project {
+    font-size: 16px;
+    padding: 13px 32px;
+    width: 141px;
+  }
+
+  .container-img-project {
+    width: 343px;
+  }
+
+  .image-project {
+    padding: 100px 16px;
+  }
+
+  .btn-arrow-project {
+    margin: 32px 113.5px 0 113.5px;
   }
 }
 
 /* Tablet */
-
 @media screen and (min-width: 768px) {
   .first-part-project {
     min-width: 704px;
