@@ -12,23 +12,32 @@ getAllFoto();
 
 const swiper = new Swiper('.swiper', {
   modules: [Navigation, Keyboard, Mousewheel],
-  cssMode: true,
+  // cssMode: true,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  direction: 'horizontal',
-  slidesPerView: 1,
+
   grabCursor: true,
   simulateTouch: true,
   keyboard: {
     enabled: true,
     pageUpDown: true,
   },
-  mousewheel: {
-    sensitivity: 1,
+  mousewheel: true,
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1440: {
+      slidesPerView: 4,
+    },
   },
   speed: 400,
+  spaceBetween: 16,
 });
 
 async function getAllFoto() {
@@ -103,7 +112,7 @@ function makeGallery(array) {
     .map(
       element =>
         `<li class="swiper-slide">
-      <div class="slide-container">
+          <div class="slide-container">
           <div class="reviews-thumb">
             <img
               src="${element.avatar_url}"
