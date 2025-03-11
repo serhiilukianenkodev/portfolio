@@ -6,7 +6,9 @@
 
 .covers-content {
   background-color: var(--bg-color-gray);
-  background-image: url(../img/covers/background-mob-min.png);
+  background-image: 
+  radial-gradient(circle at 20% 10%, var(--bg-color-accent) 0%,  transparent 50%), 
+  radial-gradient(circle at 150% 110%, var(--bg-color-accent) 0%,  transparent 50%);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -20,11 +22,7 @@
   margin: 0 auto;
 }
 
-@media screen and (min-resolution: 192dpi) {
-  .covers-content {
-    background-image: url(../img/covers/background-mob-x2-min.png);
-  }
-}
+
 
 
 .covers-animatior {
@@ -96,13 +94,9 @@
 
   .covers-content {
     height: 960px;
-    background-image: url(../img/covers/background-tab-min.png);
-  }
-
-  @media screen and (min-resolution: 192dpi) {
-    .covers-content {
-      background-image: url(../img/covers/background-tab-x2-min.png);
-    }
+    background-image: 
+    radial-gradient(circle at 30% 5%, var(--bg-color-accent) 0%,  transparent 30%), 
+    radial-gradient(circle at 95% 75%, var(--bg-color-accent) 0%,  transparent 30%);
   }
 
   .covers-list {
@@ -125,13 +119,10 @@
   }
 
   .covers-content {
-    background-image: url(../img/covers/background-desk-min.png);
-  }
-
-  @media screen and (min-resolution: 192dpi) {
-    .covers-content {
-      background-image: url(../img/covers/background-desk-x2-min.png);
-    }
+    background-image: 
+    radial-gradient(circle at 40% 10%, var(--bg-color-accent) 0%,  transparent 20%), 
+    radial-gradient(circle at 10% 35%, var(--bg-color-accent) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, var(--bg-color-accent) 0%,  transparent 20%);
   }
 
   .covers-list {
