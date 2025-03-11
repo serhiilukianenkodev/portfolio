@@ -5,7 +5,6 @@ import 'accordion-js/dist/accordion.min.css';
 
 import './js/theme/theme';
 import './js/header/header';
-import './js/hero/hero';
 import './js/about/about';
 import './js/about/skills';
 import './js/benefits/benefits';
