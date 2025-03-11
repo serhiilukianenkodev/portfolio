@@ -1,7 +1,7 @@
 import Accordion from 'accordion-js';
 
 new Accordion('.about-description-list', {
-  duration: 500,
+  openOnInit: [0],
   showMultiple: true,
   elementClass: 'about-item',
   triggerClass: 'about-title',
