@@ -12,12 +12,11 @@ getAllFoto();
 
 const swiper = new Swiper('.swiper', {
   modules: [Navigation, Keyboard, Mousewheel],
-  // cssMode: true,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-
+  direction: 'horizontal',
   grabCursor: true,
   simulateTouch: true,
   keyboard: {
@@ -47,25 +46,6 @@ async function getAllFoto() {
     );
     console.log(result.data);
     makeGallery(result.data);
-
-    // const targetLast = document.querySelector('.swiper-slide:last-child');
-    // const targetFirst = document.querySelector('.swiper-slide:first-child');
-
-    // const options = {
-    //   rootMargin: '0px',
-    //   threshold: 1.0,
-    // };
-
-    // const observerLast = new IntersectionObserver(arr => {
-    //   if (arr[0].isIntersecting) console.log('LAST', arr[0]);
-    // }, options);
-
-    // const observerFirst = new IntersectionObserver(arr => {
-    //   if (arr[0].isIntersecting) console.log('FIRST', arr[0]);
-    // }, options);
-
-    // observerFirst.observe(targetFirst);
-    // observerLast.observe(targetLast);
   } catch (error) {
     const messageErr = `<li class="reviews-item">
         <div class="reviews-content">
@@ -112,7 +92,7 @@ function makeGallery(array) {
     .map(
       element =>
         `<li class="swiper-slide">
-          <div class="slide-container">
+      
           <div class="reviews-thumb">
             <img
               src="${element.avatar_url}"
@@ -125,7 +105,7 @@ function makeGallery(array) {
             <h3 class="reviews-member">${element.author}</h3>
             <p class="reviews-text">${element.review}
             </p>
-          </div>
+         
           </div>
         </li>
     `
