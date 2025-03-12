@@ -1,8 +1,20 @@
 .theme-wrapper {
   position: absolute;
-  top: 125px;
-  left: 40px;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-200%);
   z-index: 501;
+  cursor: pointer;
+
+  @media only screen and (min-width: 375px) {
+    transform: translateX(-60px);
+  }
+  @media only screen and (min-width: 768px) {
+    transform: translateX(-245px);
+  }
+  @media only screen and (min-width: 1440px) {
+    transform: translateX(-580px);
+  }
 }
 
 .theme-switch {
