@@ -1,7 +1,8 @@
 .theme-wrapper {
-  position: fixed;
-  top: 20px;
-  right: 20px;
+  position: absolute;
+  top: 125px;
+  left: 40px;
+  z-index: 501;
 }
 
 .theme-switch {
