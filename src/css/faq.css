@@ -1,3 +1,15 @@
+.faq {
+  padding-bottom: 64px;
+
+  @media only screen and (min-width: 768px) {
+    padding-bottom: 96px;
+  }
+
+  @media only screen and (min-width: 1440px) {
+    padding-bottom: 164px;
+  }
+}
+
 .faq-list {
   margin-top: 32px;
 

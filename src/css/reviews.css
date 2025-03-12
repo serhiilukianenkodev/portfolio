@@ -1,3 +1,7 @@
+.reviews {
+  padding-top: 64px;
+}
+
 .reviews-swiper {
   width: 100%;
   height: 100%;
@@ -111,6 +115,10 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .reviews {
+    padding-top: 96px;
+  }
+
   .reviews-gallery {
     max-width: 704px;
   }
@@ -132,6 +140,10 @@
 }
 
 @media only screen and (min-width: 1440px) {
+  .reviews {
+    padding-top: 164px;
+  }
+
   .reviews-gallery {
     max-width: 1376px;
   }
