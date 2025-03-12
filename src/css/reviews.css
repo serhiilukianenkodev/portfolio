@@ -82,26 +82,29 @@
   transform: scale(1.5);
 }
 
-.swiper-buttons {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  margin: 0 auto;
-  margin-top: 32px;
-  max-width: 116px;
-}
+/* .swiper-slide:hover .reviews-member,
+.swiper-slide:focus .reviews-member {
+  transform: translateX(22px) scale(1.2);
+} */
 
-.swiper-btn {
-  border: 1px solid rgba(250, 250, 250, 0.5);
-  border-radius: 60px;
-  width: 52px;
+.btn-arrow-project {
+  margin: 32px auto 0 auto;
+  width: 116px;
   height: 52px;
-  padding: 14px;
-  background: var(--bg-color-main);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.rotate {
-  transform: rotate(-180deg);
+.left-arrow,
+.right-arrow {
+  border-radius: 60px;
+  padding: 14px;
+  width: 52px;
+  height: 100%;
+  background: var(--bg-color-main);
+  border: 1px solid rgba(250, 250, 250, 0.5);
+  color: #ffffff;
 }
 
 .swiper-button-disabled {
