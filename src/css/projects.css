@@ -1,20 +1,15 @@
 /* Mobile 320 */
-.projects {
-}
 
 .title-project {
   margin-bottom: 32px;
 }
 
-.container-project {
-}
-
 .first-part-project {
   border-radius: 24px;
-  min-width: 320px;
+  min-width: 288px;
   height: 417px;
   background: #fafafa;
-  padding: 32px;
+  padding: 25px;
 }
 
 .list-project {
@@ -53,22 +48,24 @@
   margin-bottom: 32px;
 }
 
-.btn-project {
+.link-project {
+  display: block;
+  margin-top: 32px;
+  padding: 13px 25px;
+  border-radius: 60px;
+  width: 130px;
+  height: 45px;
   font-size: 14px;
   letter-spacing: -0.02em;
   text-align: center;
   color: var(--text-color-white);
   border-radius: 60px;
-  border-color: inherit;
   border: none;
-  padding: 10px 28px;
-  width: 130px;
-  height: 45px;
   background: var(--text-color-accent);
 }
 
-.btn-project:focus,
-.btn-project:hover {
+.link-project:focus,
+.link-project:hover {
   background: var(--bg-color-accent-hover);
 }
 
@@ -103,12 +100,6 @@
   color: #ffffff;
 }
 
-.icons-arrow-left {
-}
-
-.icons-arrow-right {
-}
-
 .swiper-button-disabled {
   background: var(--bg-color-main);
   border: 1px solid rgba(250, 250, 250, 0.2);
@@ -125,6 +116,7 @@
 @media screen and (min-width: 375px) {
   .first-part-project {
     max-width: 375px;
+    padding: 32px;
   }
 
   .list-project {
@@ -142,10 +134,10 @@
     width: 273px;
   }
 
-  .btn-project {
+  .link-project {
     font-size: 16px;
-    padding: 13px 32px;
     width: 141px;
+    padding: 13px 32px;
   }
 
   .container-img-project {
@@ -187,7 +179,7 @@
     height: 132px;
   }
 
-  .btn-project {
+  .link-project {
     padding: 18px 50px;
     width: 177px;
     height: 55px;

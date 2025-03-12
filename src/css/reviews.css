@@ -1,18 +1,9 @@
-/* .reviews {
-  padding-top: 60px;
-} */
-
 .reviews-swiper {
   width: 100%;
   height: 100%;
 }
 
 .reviews-title {
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: -0.02em;
-  color: rgba(250, 250, 250, 0.4);
   padding-bottom: 32px;
 }
 
@@ -81,11 +72,6 @@
 .swiper-slide:focus .reviews-image {
   transform: scale(1.5);
 }
-
-/* .swiper-slide:hover .reviews-member,
-.swiper-slide:focus .reviews-member {
-  transform: translateX(22px) scale(1.2);
-} */
 
 .btn-arrow-project {
   margin: 32px auto 0 auto;
