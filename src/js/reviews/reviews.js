@@ -21,8 +21,8 @@ getAllFoto();
 const swiper = new Swiper('.reviews-swiper', {
   modules: [Navigation, Keyboard, Mousewheel],
   navigation: {
-    nextEl: '.reviews-button-next',
-    prevEl: '.reviews-button-prev',
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev ',
   },
   direction: 'horizontal',
   grabCursor: true,
