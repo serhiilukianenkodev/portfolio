@@ -10,7 +10,6 @@ const gallery = document.querySelector('.reviews-gallery');
 const updateCardHeight = () => {
   const items = document.querySelectorAll('.reviews-text');
   const max = [...items].reduce((max, el) => {
-    console.dir(el.offsetHeight);
     return max < el.offsetHeight ? el.offsetHeight : max;
   }, 0);
 
@@ -19,11 +18,11 @@ const updateCardHeight = () => {
 
 getAllFoto();
 
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.reviews-swiper', {
   modules: [Navigation, Keyboard, Mousewheel],
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.reviews-button-next',
+    prevEl: '.reviews-button-prev',
   },
   direction: 'horizontal',
   grabCursor: true,
@@ -46,6 +45,7 @@ const swiper = new Swiper('.swiper', {
   },
   speed: 400,
   spaceBetween: 16,
+  wrapperClass: 'reviews-gallery',
 });
 
 async function getAllFoto() {
@@ -53,7 +53,6 @@ async function getAllFoto() {
     const result = await axios.get(
       `https://portfolio-js.b.goit.study/api/reviews`
     );
-    console.log(result.data);
     makeGallery(result.data);
     updateCardHeight();
   } catch (error) {
