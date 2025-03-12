@@ -1,6 +1,8 @@
-Команда Team lead - Сергій Лук'яненко (serhii.lukianenko.dev@gmail.com) Scrum
-master - Катерина Однорог (katya.odnorog@gmail.com) Developers:
+Команда 
+Team lead - Сергій Лук'яненко (serhii.lukianenko.dev@gmail.com) 
+Scrum master - Катерина Однорог (katya.odnorog@gmail.com) 
 
+Developers:
 1. Header - Марія Гур'єва (Marygureva@gmail.com)
 2. Hero - Марина Демченко (marina810920@gmail.com)
 3. About me - Олександр Малахов (hisio13alex@gmail.com)
