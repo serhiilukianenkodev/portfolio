@@ -8,6 +8,29 @@ document.addEventListener('DOMContentLoaded', function () {
   const orderBtns = document.querySelectorAll('.order-btn');
 
   menuBtn.addEventListener('click', toggleDesktokMenu);
+  openMenuBtn.addEventListener('click', toggleMenu);
+  closeMenuBtn.addEventListener('click', turnOffMenu);
+
+  function toggleMenu(e) {
+    const isOpen = e.target.classList.contains('is-open');
+    if (isOpen) {
+      e.target.classList.remove('is-open');
+      header.classList.remove('mob-menu-open');
+      document.body.style.overflow = '';
+    } else {
+      window.addEventListener('keydown', onKeyPressed);
+      e.target.classList.add('is-open');
+      header.classList.add('mob-menu-open');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function onKeyPressed(e) {
+    if (e.key === 'Escape') {
+      window.removeEventListener('keydown', onKeyPressed);
+      turnOffMenu();
+    }
+  }
 
   function toggleDesktokMenu() {
     const isShown = navMenu.classList.contains('shown');
@@ -18,19 +41,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  const toggleMenu = e => {
-    const isOpen = e.target.classList.contains('is-open');
-    if (isOpen) {
-      e.target.classList.remove('is-open');
-      header.classList.remove('mob-menu-open');
-      document.body.style.overflow = '';
-    } else {
-      e.target.classList.add('is-open');
-      header.classList.add('mob-menu-open');
-      document.body.style.overflow = 'hidden';
-    }
-  };
-
   function turnOffMenu() {
     header.classList.remove('mob-menu-open');
     navMenu.classList.remove('shown');
@@ -38,9 +48,6 @@ document.addEventListener('DOMContentLoaded', function () {
     closeMenuBtn.classList.add('is-open');
     document.body.style.overflow = '';
   }
-
-  openMenuBtn.addEventListener('click', toggleMenu);
-  closeMenuBtn.addEventListener('click', turnOffMenu);
 
   [...navLinks, ...orderBtns].forEach(link => {
     link.addEventListener('click', function (e) {
