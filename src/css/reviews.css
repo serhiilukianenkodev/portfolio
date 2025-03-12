@@ -82,10 +82,10 @@
   transform: scale(1.5);
 }
 
-.swiper-slide:hover .reviews-member,
+/* .swiper-slide:hover .reviews-member,
 .swiper-slide:focus .reviews-member {
   transform: translateX(22px) scale(1.2);
-}
+} */
 
 .btn-arrow-project {
   margin: 32px auto 0 auto;
