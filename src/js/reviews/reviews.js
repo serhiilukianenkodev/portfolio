@@ -21,7 +21,6 @@ getAllFoto();
 
 const swiper = new Swiper('.swiper', {
   modules: [Navigation, Keyboard, Mousewheel],
-  // cssMode: true,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -123,20 +122,4 @@ function makeGallery(array) {
     )
     .join(' ');
   gallery.insertAdjacentHTML('beforeend', listImages);
-
-  // =========================================== buttons
-  // const reviewsCards = document.querySelector('.swiper');
-  // const listBtn = `<div class="swiper-buttons">
-  //       <button type="button" class="swiper-btn swiper-button-prev rotate">
-  //         <svg class="arrow" width="25" height="24">
-  //           <use href="./img/sprite.svg#icon-arrow-narrow-right"></use>
-  //         </svg>
-  //       </button>
-  //       <button type="button" class="swiper-btn swiper-button-next">
-  //         <svg class="arrow" width="25" height="24">
-  //           <use href="./img/sprite.svg#icon-arrow-narrow-right"></use>
-  //         </svg>
-  //       </button>
-  //     </div>`;
-  // reviewsCards.insertAdjacentHTML('beforeend', listBtn);
 }
