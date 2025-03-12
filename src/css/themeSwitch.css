@@ -3,7 +3,7 @@
   top: 70px;
   left: 50%;
   transform: translateX(-200%);
-  z-index: 501;
+  z-index: 700;
   cursor: pointer;
 
   @media only screen and (min-width: 375px) {

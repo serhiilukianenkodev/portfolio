@@ -5,13 +5,13 @@ import 'swiper/css';
 
 // ==============================================================
 
-const refs = {
-  btnSeeProject: document.querySelector('.btn-project'),
-};
+// const refs = {
+//   btnSeeProject: document.querySelector('.btn-project'),
+// };
 
-refs.btnSeeProject.addEventListener('click', () => {
-  window.open('https://github.com/serhiilukianenkodev/portfolio', '_blank');
-});
+// refs.btnSeeProject.addEventListener('click', () => {
+//   window.open('https://github.com/serhiilukianenkodev/portfolio', '_blank');
+// });
 
 // ==============================================================
 

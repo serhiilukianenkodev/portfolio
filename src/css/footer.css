@@ -73,7 +73,7 @@
 .footer-input-email:-webkit-autofill:active {
   box-shadow: 0 0 0 1000px transparent inset;
   -webkit-text-fill-color: rgba(250, 250, 250, 0.6);
-  transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 500ms ease-in-out;
 }
 
 .email-succes {
@@ -128,7 +128,7 @@
 .footer-input-comments:-webkit-autofill:active {
   box-shadow: 0 0 0 1000px transparent inset;
   -webkit-text-fill-color: rgba(250, 250, 250, 0.6);
-  transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 500ms ease-in-out;
 }
 
 .footer-button {
@@ -146,7 +146,7 @@
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.5s ease;
 }
 
 .footer-button:hover,
@@ -190,7 +190,7 @@
   font-size: 12px;
   letter-spacing: -0.02em;
   color: var(--text-color-white);
-  transition: border 0.4s ease;
+  transition: border 0.5s ease;
   font-style: normal;
 }
 
@@ -201,7 +201,7 @@
 
 @media only screen and (min-width: 768px) {
   .footer {
-    padding-top: 80px;
+    padding-top: 82px;
     padding-bottom: 169px;
     background-image: url(/img/footer/footer-background-tab-1x.png);
   }
