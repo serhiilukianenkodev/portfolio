@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
     navMenu.classList.remove('shown');
     openMenuBtn.classList.remove('is-open');
     closeMenuBtn.classList.add('is-open');
+    document.body.style.overflow = '';
   }
 
   openMenuBtn.addEventListener('click', toggleMenu);
@@ -49,7 +50,6 @@ document.addEventListener('DOMContentLoaded', function () {
       const targetSection = document.querySelector(targetId);
 
       if (targetSection) {
-        document.body.style.overflow = '';
         turnOffMenu();
         targetSection.scrollIntoView({
           behavior: 'smooth',
