@@ -7,11 +7,21 @@ import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 import 'swiper/css';
 
 const gallery = document.querySelector('.reviews-gallery');
+const updateCardHeight = () => {
+  const items = document.querySelectorAll('.reviews-text');
+  const max = [...items].reduce((max, el) => {
+    console.dir(el.offsetHeight);
+    return max < el.offsetHeight ? el.offsetHeight : max;
+  }, 0);
+
+  items.forEach(el => (el.style.height = `${max}px`));
+};
 
 getAllFoto();
 
 const swiper = new Swiper('.swiper', {
   modules: [Navigation, Keyboard, Mousewheel],
+  // cssMode: true,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -46,8 +56,9 @@ async function getAllFoto() {
     );
     console.log(result.data);
     makeGallery(result.data);
+    updateCardHeight();
   } catch (error) {
-    const messageErr = `<li class="reviews-item">
+    const messageErr = `<li class="reviews-item-error">
         <div class="reviews-content">
           <p class="reviews-error">Not found</p>
         </div>
