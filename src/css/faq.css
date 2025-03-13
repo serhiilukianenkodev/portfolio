@@ -49,8 +49,8 @@
 }
 
 .faq-question {
-  cursor: pointer;
   position: relative;
+  /* cursor: pointer;
   padding-right: 40px;
   font-size: 20px;
   font-weight: 700;
@@ -59,7 +59,25 @@
   &:hover,
   &:focus {
     color: var(--text-color-main);
+  } */
+}
+
+.faq-question button {
+  cursor: pointer;
+  padding-right: 40px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-color-white);
+  border: none;
+  width: 100%;
+  text-align: left;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: var(--text-color-main);
   }
+  background-color: inherit;
 }
 
 .arrow {
