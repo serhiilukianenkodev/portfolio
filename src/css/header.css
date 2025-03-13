@@ -191,7 +191,7 @@
 
 .order-btn {
   display: inline-block;
-  align-self: center;
+
   background-color: var(--bg-color-accent);
   color: white;
   padding: 12px 24px;
@@ -199,6 +199,9 @@
   transition: background-color 500ms ease-in-out;
 }
 
+.burger-nav .order-btn {
+  align-self: center;
+}
 .order-btn:hover,
 .order-btn:focus {
   background-color: var(--bg-color-accent-hover);
