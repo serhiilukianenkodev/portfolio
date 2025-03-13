@@ -74,7 +74,6 @@ async function getAllFoto() {
     const observer = new IntersectionObserver(arr => {
       if (arr[0].isIntersecting)
         messageAllert('ERROR', `Sorry, ${error}!`, ' #ef4040');
-      console.log(arr[0]);
     }, options);
 
     observer.observe(target);
