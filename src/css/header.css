@@ -79,22 +79,30 @@
   }
 }
 
+.burger-nav {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 32px;
+  padding-bottom: 64px;
+}
+
 .burger-links {
   gap: 8px;
-  margin-top: 242px;
 }
 
-.mobile-menu .order-btn {
-  margin-top: 242px;
+.burger-links li:not(:last-child) {
+  margin-bottom: 8px;
 }
 
-.mobile-menu .nav-links a {
+.burger-links a {
+  padding: 4px;
   text-decoration: underline;
 }
 
 .mobile-menu .mob-btn {
   display: block;
-  margin-top: 50px;
   margin-left: auto;
 }
 
@@ -183,11 +191,12 @@
 
 .order-btn {
   display: inline-block;
-  background: var(--bg-color-accent);
+  align-self: center;
+  background-color: var(--bg-color-accent);
   color: white;
   padding: 12px 24px;
   border-radius: 30px;
-  transition: background-color 500ns ease-in-out;
+  transition: background-color 500ms ease-in-out;
 }
 
 .order-btn:hover,
