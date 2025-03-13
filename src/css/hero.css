@@ -18,10 +18,11 @@
   flex-direction: column;
   justify-content: space-between;
   height: 812px;
+  padding-bottom: 32px;
+  padding-top: 281px;
 }
 
 .hero-title {
-  padding-top: 281px;
   font-weight: 500;
   font-size: 50px;
   line-height: 1;
@@ -37,7 +38,6 @@ span {
 .hero-socials {
   display: flex;
   gap: 4px;
-  margin-bottom: 32px;
 }
 
 .hero-social-item {
@@ -86,10 +86,10 @@ span {
   .hero-position {
     height: 1024px;
     width: 704px;
+    padding-top: 300px;
   }
 
   .hero-title {
-    padding-top: 300px;
     width: 620px;
     font-size: 90px;
   }
@@ -99,7 +99,6 @@ span {
     gap: 8px;
     width: 473px;
     height: 55px;
-    margin-bottom: 32px;
   }
 
   .hero-social-item {

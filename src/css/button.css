@@ -1,0 +1,17 @@
+.btn-return {
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  width: 40px;
+  height: 40px;
+}
+
+.rerturn-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background: var(--bg-color-main);
+  border: 1px solid #ed3b44;
+  color: rgba(250, 250, 250, 0.5);
+  transform: rotate(-90deg);
+}
