@@ -14,3 +14,11 @@ const observer = new IntersectionObserver(arr => {
 }, options);
 
 observer.observe(target);
+
+btnReturn.addEventListener('click', e => {
+  e.preventDefault();
+  const target = document.querySelector('.hero');
+  target.scrollIntoView({
+    behavior: 'smooth',
+  });
+});
