@@ -251,7 +251,7 @@
   }
 }
 
-.skils .swiper-button-next {
+.skils .skills-button-next {
   position: absolute;
   margin: 0;
   top: 50%;
@@ -269,7 +269,7 @@
   }
 }
 
-.swiper-button-next::after {
+.skills-button-next::after {
   display: none;
 }
 

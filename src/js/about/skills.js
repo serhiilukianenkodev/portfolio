@@ -26,7 +26,7 @@ const swiper = new Swiper('.swiper-skills', {
     },
   },
   navigation: {
-    nextEl: '.swiper-button-next',
+    nextEl: '.skills-button-next',
   },
   on: {
     click: ({ activeIndex, clickedIndex }) => {
