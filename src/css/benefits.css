@@ -16,6 +16,7 @@
 }
 
 .benefit-item {
+  border-radius: 20px;
   padding: 10px;
   background: var(--bg-color-black);
   width: 100%;
