@@ -15,6 +15,10 @@
   @media only screen and (min-width: 1440px) {
     transform: translateX(-580px);
   }
+
+  .header.mob-menu-open ~ & {
+    z-index: 10;
+  }
 }
 
 .theme-switch {
