@@ -268,10 +268,12 @@
   }
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1440px) {
+  .footer-container {
+    width: 1026px;
+    margin: 0 auto;
+  }
   .footer {
-    padding-left: 164px;
-    padding-right: 164px;
     background-image: url(/img/footer/footer-background-desk-1x.png);
   }
 
