@@ -1,16 +1,31 @@
 .hero {
-  background-image: url(../img/hero/hero-desc-min.webp);
+  background: linear-gradient(
+      90deg,
+      rgba(28, 29, 32, 0) 0%,
+      var(--bg-color-main) 60%,
+      var(--bg-color-main) 100%
+    ),
+    repeating-linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0) 0px,
+        rgba(59, 59, 59, 0.3) 35px,
+        rgba(59, 59, 59, 0.1) 20px,
+        rgba(255, 255, 255, 0) 71px
+      )
+      var(--bg-color-accent);
+
+  /* background-image: url(../img/hero/hero-desc-min.webp);
   background-position: -240px 0;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   height: 812px;
   margin: 0 auto;
 }
 
 @media screen and (min-resolution: 192dpi) {
-  .hero {
+  /* .hero {
     background-image: url(../img/hero/hero-desc-x2-min.webp);
-  }
+  } */
 }
 
 .hero-position {

@@ -1,9 +1,10 @@
 .btn-return {
   position: fixed;
   bottom: 5%;
-  right: 5%;
+  right: 10%;
   width: 40px;
   height: 40px;
+  z-index: 999;
 }
 
 .rerturn-btn {
