@@ -5,9 +5,16 @@
 
 .covers-content {
   background-color: var(--bg-color-gray);
-  background-image: 
-  radial-gradient(circle at 20% 10%, var(--bg-color-accent) 0%,  transparent 50%), 
-  radial-gradient(circle at 150% 110%, var(--bg-color-accent) 0%,  transparent 50%);
+  background-image: radial-gradient(
+      circle at 20% 10%,
+      var(--bg-color-accent) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 150% 110%,
+      var(--bg-color-accent) 0%,
+      transparent 50%
+    );
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -21,47 +28,51 @@
   margin: 0 auto;
 }
 
+@keyframes coversAnimator {
+  0% {
+    transform: translateX(25%);
+  }
+  100% {
+    transform: translateX(-25%);
+  }
+}
 
-
+@keyframes coversAnimatorRevert {
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(25%);
+  }
+}
 
 .covers-animatior {
-  position: absolute;
-  left: 0;
-  top: 20%;
-
+  transform: rotate(16deg) translateY(-30%);
   display: flex;
-
-  animation-name: coversAnimator;
-  animation-duration: 10s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-
-  animation-play-state: paused;
+  flex-wrap: wrap;
+  gap: 43px;
 }
 
 .covers-animatior.animate {
-  animation-play-state: running;
-}
+  & :nth-child(n) {
+    animation-name: coversAnimator;
+  }
 
-@keyframes coversAnimator {
-  0% {
-    transform: rotate(16deg) translateX(0%);
+  & :nth-child(2n) {
+    animation-name: coversAnimatorRevert;
   }
-  100% {
-    transform: rotate(16deg) translateX(-50%);
-  }
+  animation-play-state: running;
 }
 
 .covers-list {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: nowrap;
+  /* justify-content: center; */
   gap: 30px;
-  flex-shrink: 0;
-
-  width: calc(282px * 3 + 30px * 2 + 30px);
-  height: 100%;
-  padding-left: 30px;
+  animation-name: coversAnimator;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 .covers-item {
@@ -73,17 +84,11 @@
   height: 162px;
 }
 
-.covers-item:is(:nth-child(4), :nth-child(5), :nth-child(6), :nth-child(10)) {
-  transform: translateX(-40%);
-}
-
 .cover-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
-
 
 @media only screen and (min-width: 768px) {
   .covers {
@@ -92,23 +97,23 @@
 
   .covers-content {
     height: 960px;
-    background-image: 
-    radial-gradient(circle at 30% 5%, var(--bg-color-accent) 0%,  transparent 30%), 
-    radial-gradient(circle at 95% 75%, var(--bg-color-accent) 0%,  transparent 30%);
-  }
-
-  .covers-list {
-    width: calc(544px * 3 + 30px * 2 + 30px);
+    background-image: radial-gradient(
+        circle at 30% 5%,
+        var(--bg-color-accent) 0%,
+        transparent 30%
+      ),
+      radial-gradient(
+        circle at 95% 75%,
+        var(--bg-color-accent) 0%,
+        transparent 30%
+      );
   }
 
   .covers-item {
     width: 544px;
     height: 314px;
   }
-
 }
-
-
 
 @media only screen and (min-width: 1440px) {
   .covers {
@@ -116,16 +121,20 @@
   }
 
   .covers-content {
-    background-image: 
-    radial-gradient(circle at 40% 10%, var(--bg-color-accent) 0%,  transparent 20%), 
-    radial-gradient(circle at 10% 35%, var(--bg-color-accent) 0%, transparent 20%),
-    radial-gradient(circle at 90% 80%, var(--bg-color-accent) 0%,  transparent 20%);
-  }
-
-  .covers-list {
-    gap: 50px;
-    width: calc(544px * 3 + 50px * 2 + 50px);
-    padding-left: 50px;
+    background-image: radial-gradient(
+        circle at 40% 10%,
+        var(--bg-color-accent) 0%,
+        transparent 20%
+      ),
+      radial-gradient(
+        circle at 10% 35%,
+        var(--bg-color-accent) 0%,
+        transparent 20%
+      ),
+      radial-gradient(
+        circle at 90% 80%,
+        var(--bg-color-accent) 0%,
+        transparent 20%
+      );
   }
 }
-
